@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript4-hw</title>
+    <link rel="stylesheet" href="./hw.css">
+</head>
+<body>
+    <div class="alert_box" id="alert">
+        <p id="con">2개 박스 조작</p>
+        <button onclick="alertcontrol('none')">닫기</button>
+    </div>
+    <button onclick="alertcontrol('block')">열기</button>
+    <button onclick="alertchange('1입니다')">버튼 1</button>
+    <button onclick="alertchange('2입니다')">버튼 2</button>
+
+    <script>
+        function alertcontrol(parameter) {
+            document.getElementById('alert').style.display = parameter; 
+        }
+        function alertchange(content) {
+            document.getElementById('con').innerHTML= content;
+        }
+    </script>
+</body>
+</html>

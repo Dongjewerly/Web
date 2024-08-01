@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.alert_box {
+    background: blue;
+    color: #ccc;
+    padding: 30px;
+    display: none;
+
+
+
+}

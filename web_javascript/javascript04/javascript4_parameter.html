@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert에 효과 입히기</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="alert_box" id="alert">
+        <p>Alert 박스</p>
+        <button onclick=" alertcontrol('none') ">닫기 버튼</button>
+    </div>
+    <button onclick="alertcontrol('block')">열기 버튼</button>
+     <script>
+
+        // function alertopen() {
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+        // function alertclose() {
+        //     document.getElementById('alert').style.display = 'none';
+        // }
+
+        //파라미터 parameter를 사용하여 function을 단순화 할 수 있음 , 2함수 -> 1함수 with parameter
+        // 파라미터는 여러개를 쓸 수 있음
+        function alertcontrol(parameter) {
+            document.getElementById('alert').style.display = parameter; 
+        }
+
+
+     </script>
+</body>
+</html>

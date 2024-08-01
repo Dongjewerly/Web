@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.alert_box {
+    padding: 20px;
+    background-color: #1cdf2c;
+    color: #000;
+}
