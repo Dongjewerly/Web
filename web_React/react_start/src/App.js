@@ -4,22 +4,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="black_nav">
+        <div>개발블로그</div>
+      </div>
     </div>
   );
 }
+
+// 기본적인 html 구현은 app.js 자바스크립트 형식으로 들어감 / index.js에서 app.js를 public에 있는
+// html파일안에 들어가라고 구현되어있음
+
 
 export default App;
