@@ -1,9 +1,14 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
   let posts = '강남 고기 맛집' 
+
+  // usestate는 변수 대신 쓰는 데이터 공간을 의미, 문자, 숫자, array, object가능 데이터, 데이터 변경 함수로 이루어져 있음 , app처럼 이용하기 위해 데이터 변경시에만 렌더링 하고 효율적 html렌더링가능
+  // 따라서 자주 변경되는 데이터는 useState를 사용하는게 훨씬 효율적이다. 변수보다!! 변수는 항상 새로고침 렌더링이 들어감
+  let [글제목,글제목변경함수] = useState(['유동석','유동석1','유동석2']);
 
   function 함수() {
     return ('백이면 백이다')
@@ -12,17 +17,29 @@ function App() {
   return (
     <div className="App">
       <div className="black_nav">
-        <div className={posts} style={{color:'red', fontSize:'100px'}}>이 곳은 개발블로그 제목을 작성하는 곳 입니다.</div>
+        <div>DS의 Development 블로그</div>
       </div>
-      <img src={logo}/>
-      <h4>{posts},{함수()}</h4>
+      <div className="list">
+        <div>
+          <h3>{글제목[0]}</h3>
+          <p>2024.08.09</p>
+          <hr/>
+        </div>
+        <div>
+          <h3>{글제목[1]}</h3>
+          <p>2024.08.09</p>
+          <hr/>
+        </div>
+        <div>
+          <h3>{글제목[2]}</h3>
+          <p>2024.08.09</p>
+          <hr/>
+        </div>
+        
+        
+      </div>
     </div>
   );
 }
 
-// 기본적인 html 구현은 app.js 자바스크립트 형식으로 들어감 / index.js에서 app.js를 public에 있는
-// html파일안에 들어가라고 구현되어있음
-// 리액트에서는 데이터 바인딩, 서버에서 가져온 데이터나 지속적으로 바뀌는 데이터를 html안에 넣을 수 있음 너무 좋음 심지어 javascript에서 html 내용을 바꾸는 문법인 document.getElementById.('??').innerHtml='??'로 안 넣고 {} 사용하면 됨
-// 변수명이나 함수를 {안에} 적음으로써 html로 가져올 수 있다 + 이미지도 가능 원래는 <img> 태그의 src를 사용하지만 리액트에서는 {} 로 해결 src, id, className등 여러 곳에 데이터 삽입 가능~
-// jsx에서 style을 넣고 싶을 떄는 style = {object 자료형으로 만든 스타일}
 export default App;
