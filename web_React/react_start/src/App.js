@@ -56,9 +56,32 @@ function App() {
           <p>2024.08.09</p>
           <hr/>
         </div>
+
+        <Modal/>
+        {/* 컴포넌트화 끝 밑에 function 함수명으로 만들고 위에 <></>태그 혹은 </>로 적으면 끝 한 단어로 축약~~ */}
+
+        {/* <div className='Modal'>
+          <h2>제목</h2>
+          <p>날짜</p>
+          <p>상세내용</p>
+        </div> */}
+        {/* react는 return 안에 한 div만 가능함 여러 div는 큰 div 안에 넣어야함 이럴 떄 많은 div를 간단하게 축약하기 위해 component 문법을 사용한다. */}
       </div>
     </div>
   );
 }
+
+
+function Modal(){
+  return (
+    <div className='Modal'>
+          <h2>제목</h2>
+          <p>날짜</p>
+          <p>상세내용</p>
+        </div>
+  )
+}
+// 모달안에 위에 글제목 등 state를 쓸 수 있나요? nope 쓰려면 데이터를 전해줘야함 ㅠ
+// 컴포넌트화 문제는 useState를 쓸 수 없음 props를 이용해 state를 사용해야함 ㅠ
 
 export default App;
