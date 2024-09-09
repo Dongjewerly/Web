@@ -17,3 +17,10 @@ app.get('/hi',function(req,res){
 });
 
 // request 요청 respond 응답 저 둘의 파라미터들이랑 밑에 res.send();
+
+
+app.get('/',function(req,res){
+    res.sendFile(__dirname + '/index.html');
+});
+
+//  /는 홈페이지
